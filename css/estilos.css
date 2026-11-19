@@ -1,0 +1,140 @@
+:root {
+    --fondo-1: #ffd6e7;
+    --fondo-2: #ffc2d9;
+    --rosa-principal: #f48fb1;
+    --rosa-hover: #ec6c9a;
+    --rosa-borde: #f8bbd0;
+    --rosa-suave: #fff0f6;
+    --texto: #4a2c3a;
+    --enlace: #c2185b;
+    --error: #c2185b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--fondo-1), var(--fondo-2));
+}
+
+.tarjeta {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 32px 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(244, 143, 177, 0.35);
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--texto);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 14px;
+    border: 1px solid var(--rosa-borde);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--rosa-suave);
+    color: var(--texto);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--rosa-principal);
+    box-shadow: 0 0 0 3px rgba(244, 143, 177, 0.3);
+    background: #fff;
+}
+
+.error {
+    display: block;
+    text-align: left;
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 1em;
+}
+
+button,
+.boton {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: var(--rosa-principal);
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover,
+.boton:hover {
+    background: var(--rosa-hover);
+}
+
+.enlaces {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enlaces a {
+    color: var(--enlace);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.enlaces a:hover {
+    text-decoration: underline;
+}
+
+.alerta {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.alerta-error {
+    background: #ffe0ea;
+    color: #b0124f;
+}
+
+.alerta-exito {
+    background: #e6f7ec;
+    color: #2b8a3e;
+}
+
+.texto {
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .tarjeta {
+        padding: 24px 18px;
+    }
+    h1 {
+        font-size: 1.35rem;
+    }
+}
